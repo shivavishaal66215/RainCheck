@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RainCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyJ-DE-pnH">
+                                <rect key="frame" x="166" y="427" width="82" height="43"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Check"/>
+                                <connections>
+                                    <action selector="checkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5lt-vu-qPw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DyJ-DE-pnH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YEv-kO-uKk"/>
+                            <constraint firstItem="DyJ-DE-pnH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="383" id="ZN7-nI-fpC"/>
+                            <constraint firstItem="DyJ-DE-pnH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mWd-5P-Vpa"/>
+                            <constraint firstItem="DyJ-DE-pnH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="v4L-3w-8ij"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="9rg-K8-TvN" kind="presentation" identifier="goToResult" id="jhp-qq-orV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="sU2-Fr-5UU">
+            <objects>
+                <viewController id="9rg-K8-TvN" customClass="ResultViewController" customModule="RainCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CzW-rq-pqV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLl-t6-Lwt">
+                                <rect key="frame" x="155" y="402" width="104" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xeh-M0-G6O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kLl-t6-Lwt" firstAttribute="centerX" secondItem="CzW-rq-pqV" secondAttribute="centerX" id="E2s-wx-1Ie"/>
+                            <constraint firstItem="kLl-t6-Lwt" firstAttribute="centerY" secondItem="CzW-rq-pqV" secondAttribute="centerY" id="OEt-cC-RXk"/>
+                            <constraint firstItem="kLl-t6-Lwt" firstAttribute="leading" secondItem="xeh-M0-G6O" secondAttribute="leading" constant="155" id="Voc-4a-M3y"/>
+                            <constraint firstItem="kLl-t6-Lwt" firstAttribute="top" secondItem="xeh-M0-G6O" secondAttribute="top" constant="402" id="ld6-DB-k8N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="kLl-t6-Lwt" id="VTc-aC-9Qk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4h0-e5-uzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913.04347826086962" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
